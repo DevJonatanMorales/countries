@@ -1,0 +1,22 @@
+.article {
+  padding: 0 10rem 0 10rem;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+    gap: 75px;
+  }
+  &__title {
+    height: 80px;
+    background-color: $light-mode-elements;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+}
+
+.dark-mode .article__title {
+  background-color: $dark-blue-elements;
+  color: $dark-mode-text;
+}
