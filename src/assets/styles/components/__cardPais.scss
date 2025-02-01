@@ -27,6 +27,7 @@
     padding: 1.3rem;
     padding-bottom: 1.5rem;
     z-index: 2000;
+    transition: background-color 0.3s ease-in-out;
   }
 
   &__img:hover {
@@ -34,8 +35,12 @@
   }
 }
 
-// 🌙 Estilos para modo oscuro
 .dark-mode .card {
+  background-color: $dark-blue-elements;
+  color: $dark-mode-text;
+}
+
+.dark-mode .card__content {
   background-color: $dark-blue-elements;
   color: $dark-mode-text;
 }
