@@ -1,5 +1,5 @@
+import "./assets/styles/styles.scss";
 import { Home } from "./page/home";
-import "./assets/styles/index.scss";
 function App() {
   return <Home />;
 }

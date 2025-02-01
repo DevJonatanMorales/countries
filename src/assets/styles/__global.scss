@@ -1,0 +1,13 @@
+body {
+  font-family: $nunito-sans;
+  padding: 0 10rem 0 10rem;
+  margin: 0;
+  height: 97vh;
+  background-color: $very-light-gray-bg;
+  color: $very-dark-blue-text;
+}
+
+.dark-mode {
+  background-color: $very-dark-blue-bg;
+  color: $dark-mode-text;
+}
