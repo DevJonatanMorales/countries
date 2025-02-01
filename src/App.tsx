@@ -1,7 +1,7 @@
 import "./assets/styles/styles.scss";
-import { Home } from "./page/home";
+import { HomePage } from "./page/homePage";
 function App() {
-  return <Home />;
+  return <HomePage />;
 }
 
 export default App;
