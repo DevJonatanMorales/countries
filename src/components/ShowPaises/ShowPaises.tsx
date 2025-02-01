@@ -6,6 +6,7 @@ import { setCountry } from "../../features/countries";
 import { Country } from "../../interfaces/Country";
 import { RootState } from "../../app/store";
 import { Title } from "../header/Title";
+import { HeaderShowCountry } from "../HeaderShowCountry/HeaderShowCountry";
 
 export const ShowPaises = () => {
   const [isLoading, setIsloading] = useState<boolean>(true);
@@ -25,6 +26,7 @@ export const ShowPaises = () => {
 
   return (
     <article className="article">
+      <HeaderShowCountry />
       {isLoading && !country.length ? (
         <Title message="Obteniendo los paises" />
       ) : null}
