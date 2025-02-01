@@ -10,9 +10,19 @@ export const countriesApi = createApi({
       query: () => "/all",
     }),
     getByName: builder.query({
-      query: (name) => `/character?name=${name}`,
+      query: (name) => {
+        if (name.trim() !== "") return `/name/${name}`;
+        return "/all";
+      },
+    }),
+    getByRegion: builder.query({
+      query: (region) => {
+        if (region === "0") return "/all";
+        return `/region/${region}`;
+      },
     }),
   }),
 });
 
-export const { useGetAllQuery, useGetByNameQuery } = countriesApi;
+export const { useGetAllQuery, useGetByNameQuery, useGetByRegionQuery } =
+  countriesApi;
