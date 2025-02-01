@@ -15,6 +15,7 @@
   width: 480px;
   background-color: $light-mode-elements;
   display: flex;
+  box-shadow: $box-shadow-input;
   align-items: center;
 
   &__icon {
@@ -25,14 +26,10 @@
 
   &__input {
     border: none;
+    outline: none;
     font-size: 14px;
     width: 100%;
     background-color: $light-mode-elements;
-  }
-
-  &__input:focus {
-    border: red;
-    font-size: 14px;
   }
 }
 
@@ -48,18 +45,22 @@
 
 .regions {
   background-color: $light-mode-elements;
+  box-shadow: $box-shadow-input;
   width: 200px;
   height: 56px;
   font-size: 14px;
   border-radius: 0.5rem;
   padding: auto 1rem;
   border: none;
+  outline: none;
 
   &__options {
     width: 200px;
     font-size: 14px;
     padding: auto 2rem;
     height: 56px;
+    border: none;
+    outline: none;
   }
 }
 

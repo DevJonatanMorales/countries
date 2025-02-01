@@ -1,6 +1,7 @@
 .card {
   background-color: $light-mode-elements;
   border-radius: 0.5rem;
+  box-shadow: $box-shadow-card;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
 
