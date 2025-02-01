@@ -2,9 +2,15 @@ body {
   font-family: $nunito-sans;
   padding: 0;
   margin: 0;
-  height: 97vh;
+  height: auto;
   background-color: $very-light-gray-bg;
   color: $very-dark-blue-text;
+
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(1440px 90%);
+    justify-items: center;
+  }
 }
 
 .dark-mode {
