@@ -11,12 +11,11 @@ export const counterSlice = createSlice({
   name: "countries",
   initialState,
   reducers: {
-    setCountry: (state, action: counterSlice) => {
+    setCounties: (state, action: counterSlice) => {
       return action.payload;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { setCountry } = counterSlice.actions;
+export const { setCounties } = counterSlice.actions;
 export default counterSlice.reducer;

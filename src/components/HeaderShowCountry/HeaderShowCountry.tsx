@@ -5,7 +5,7 @@ import {
   useGetByRegionQuery,
 } from "../../services/countries";
 import { Country } from "../../interfaces/Country";
-import { setCountry } from "../../features/countries";
+import { setCounties } from "../../features/countries";
 import { useDispatch } from "react-redux";
 
 export const HeaderShowCountry = () => {
@@ -26,7 +26,7 @@ export const HeaderShowCountry = () => {
   };
 
   const setData = (data: Country[]) => {
-    if (data?.length) dispatch(setCountry(data));
+    if (data?.length) dispatch(setCounties(data));
   };
 
   useEffect(() => {
