@@ -2,15 +2,19 @@ import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export const Header: React.FC = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   const toggleTheme = (isDark: boolean) => {
     const body = document.body;
     if (isDark) {
       body.classList.add("dark-mode");
-      return;
+      localStorage.setItem("theme", "dark");
+    } else {
+      body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
     }
-    body.classList.remove("dark-mode");
   };
 
   const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,6 +24,12 @@ export const Header: React.FC = () => {
   useEffect(() => {
     toggleTheme(isDarkTheme);
   }, [isDarkTheme]);
+
+  useEffect(() => {
+    if (isDarkTheme) {
+      document.body.classList.add("dark-mode");
+    }
+  }, []);
 
   return (
     <header className="header">
@@ -32,15 +42,14 @@ export const Header: React.FC = () => {
         checked={isDarkTheme}
         onChange={handleToggle}
       />
-      {isDarkTheme ? (
-        <label htmlFor="btnTheme" className="header__subtitle">
-          <FaMoon className="header__icon" /> Light Mode
-        </label>
-      ) : (
-        <label htmlFor="btnTheme" className="header__subtitle">
-          <FaSun className="header__icon" /> Dark Mode
-        </label>
-      )}
+      <label htmlFor="btnTheme" className="header__subtitle">
+        {isDarkTheme ? (
+          <FaMoon className="header__icon" />
+        ) : (
+          <FaSun className="header__icon" />
+        )}
+        {isDarkTheme ? " Light Mode" : " Dark Mode"}
+      </label>
     </header>
   );
 };
