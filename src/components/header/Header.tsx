@@ -44,9 +44,9 @@ export const Header: React.FC = () => {
       />
       <label htmlFor="btnTheme" className="header__subtitle">
         {isDarkTheme ? (
-          <FaMoon className="header__icon" />
-        ) : (
           <FaSun className="header__icon" />
+        ) : (
+          <FaMoon className="header__icon" />
         )}
         {isDarkTheme ? " Light Mode" : " Dark Mode"}
       </label>
