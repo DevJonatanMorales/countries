@@ -8,8 +8,7 @@ export const countrySlice = createSlice({
   initialState,
   reducers: {
     setCountry: (state, action: PayloadAction<Country>) => {
-      console.log(action.payload);
-      return action.payload;
+      Object.assign(state, action.payload);
     },
     clearCountry: (state) => {
       Object.assign(state, initialState);
