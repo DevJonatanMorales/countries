@@ -1,0 +1,80 @@
+.country {
+  width: 80%;
+  max-width: 1280px;
+  margin: auto;
+
+  &__btn {
+    width: 136px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 3rem;
+    background-color: $light-mode-elements;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow-btn;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    margin-right: 0.3rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      height: auto;
+      gap: 1rem;
+    }
+  }
+
+  &__detalles {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      height: auto;
+      gap: 1rem;
+    }
+  }
+
+  &__info {
+    margin-left: 5rem;
+    width: 100%;
+    max-width: 598px;
+
+    @media screen and (max-width: 800px) {
+      margin: auto;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    font-weight: bold;
+    &-normal {
+      font-weight: 400;
+    }
+  }
+}
+
+.dark-mode .country__btn {
+  background-color: $dark-blue-elements;
+  color: $dark-mode-text;
+}
