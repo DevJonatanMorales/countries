@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# REST Countries API with color theme switcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
-Currently, two official plugins are available:
+## Welcome! 👋
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**To do this challenge, you need a good understanding of HTML, CSS/SASS, and JavaScript/React.**
 
-## Expanding the ESLint configuration
+## The challenge
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Your challenge is to integrate with the [REST Countries API](https://restcountries.com) to pull country data and display it like in the designs.
 
-- Configure the top-level `parserOptions` property like this:
+Your users should be able to:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode _(optional)_
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Where to find everything
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Your task is to build out the project to the designs inside the `/design` folder.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com) and you can use an icon font library for the icons.
+
+There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+
+## Building your project
+
+Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+
+1. Initialize your project as a public repository on [GitHub](https://github.com/).
+2. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
+3. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+4. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+5. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+
+## Deploying your project
+
+There are many ways to host your project for free. Our recommended hosts are:
+
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+
+## `README.md`
+
+We strongly recommend overwriting this `README.md` once you have completed the challenge. Add the instructions for how to run the project locally below.
+
+**Have fun building!** 🚀
