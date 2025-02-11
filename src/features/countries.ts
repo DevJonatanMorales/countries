@@ -12,7 +12,8 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     setCounties: (state, action: counterSlice) => {
-      Object.assign(state, action.payload);
+      state = [];
+      return action.payload;
     },
   },
 });
